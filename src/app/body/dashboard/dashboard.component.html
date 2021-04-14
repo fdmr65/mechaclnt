@@ -1,0 +1,134 @@
+
+<div  style="margin-left:15px;margin-top: 10px;" fxLayout="row wrap" fxLayout.lt-sm="column" fxLayoutGap="10px" fxLayoutAlign="flex-start">
+  <ng-container>
+    <div fxFlex="0 1 calc(50% - 32px)" fxFlex.lt-md="100%" fxFlex.lt-sm="100%">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <mat-card-title></mat-card-title>
+        </mat-card-header>
+        <mat-card-content >
+          <table mat-table [dataSource]="data" class="mat-elevation-z8">
+            <ng-container matColumnDef="type">
+              <th mat-header-cell *matHeaderCellDef 
+              style="text-align: start;"
+              ><img src="../../../assets/img/mecha_sense_logo.png" alt="" style=" width: 7vw"></th>
+              <td style="font-family: Roboto, 'Helvetica Neue', sans-serif; font-size: 16px;"mat-cell *matCellDef="let element">
+                    {{element.type}}
+                  </td>
+            </ng-container>
+            <ng-container matColumnDef="x">
+              <th mat-header-cell *matHeaderCellDef>&nbsp;&nbsp;X</th>
+              <td mat-cell *matCellDef="let element">
+                <mat-card class="test">
+                  <div mat-card-image></div>
+                  <mat-card-content id="sensData">
+                    {{element.x.toFixed(1)}}
+                  </mat-card-content>
+                </mat-card>
+                 
+                </td>
+            </ng-container>
+    
+    
+            <ng-container matColumnDef="y">
+              <th mat-header-cell *matHeaderCellDef>&nbsp;&nbsp;Y</th>
+              <td mat-cell *matCellDef="let element">
+                <mat-card class="test">
+                  <div mat-card-image></div>
+                  <mat-card-content id="sensData">
+                    {{element.y.toFixed(1)}} 
+                  </mat-card-content>
+                </mat-card>
+               
+              </td>
+            </ng-container>
+    
+    
+            <ng-container matColumnDef="z">
+              <th mat-header-cell *matHeaderCellDef>&nbsp;&nbsp;Z</th>
+              <td mat-cell *matCellDef="let element">
+                <mat-card class="test">
+                  <div mat-card-image></div>
+                  <mat-card-content id="sensData">
+                    {{element.z.toFixed(1)}}
+                  </mat-card-content>
+                </mat-card>
+                
+                 </td>
+            </ng-container>
+    
+            <ng-container matColumnDef="symbol">
+              <!-- <th mat-header-cell *matHeaderCellDef> Symbol </th>
+              <td mat-cell *matCellDef="let element"> {{element.symbol}} </td> -->
+            </ng-container>
+    
+    
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+        </mat-card-content>
+        <mat-card-actions>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </ng-container>
+  <ng-container>
+    <div fxFlex="50.6%" fxFlex.lt-md="100%" fxFlex.lt-sm="100%" fxLayoutGap="10px">
+      <div fxLayout="column" fxLayout.lt-sm="column" fxLayoutGap="10px" fxLayoutAlign="end">
+        <ng-container>
+          <div fxFlex fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+            <div fxLayout="row wrap" fxLayout.lt-sm="column"  fxLayoutGap="30px" fxLayoutAlign="scretch">
+
+              <ng-container>
+                <div fxFlex="0 1 calc(50% - 32px)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+                
+                  <mat-card class="example-card">
+                    <mat-card-header>
+                      <mat-card-subtitle>Temperature</mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                      <app-gauge-chart [chartType]="y" ></app-gauge-chart>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
+              </ng-container>
+              
+              <ng-container>
+
+                <div fxFlex="0 1 calc(50% - 10px)" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%">
+                  <mat-card class="example-card">
+                    <button  [disabled]="isValid" style="position: absolute; bottom:0;right: 0; z-index: 5;" mat-stroked-button (click)="train()">TRAIN</button>
+                    <mat-spinner [diameter]="40" class="spinner" *ngIf="ok"></mat-spinner>
+                    <mat-card-header>
+                      <mat-card-subtitle>Anomaly</mat-card-subtitle>
+                     
+                    </mat-card-header>
+                    <mat-card-content [ngClass]="{'train_ok': train_status, 'train_nok':!train_status }" >
+                      <app-gauge-chart [chartType]="x" ></app-gauge-chart>
+                    </mat-card-content>
+                    <p  class="center" [ngClass]="{'p-info-date':train_message.length>=25,'p-info-train':train_message.length<25}" *ngIf="counter!=0">{{train_message}}</p>
+                  </mat-card>
+                </div>
+
+              </ng-container>
+            </div>
+          </div>
+        </ng-container>
+        <ng-container>
+          <div fxFlex="30" fxFlex.lt-md="0 1 calc(50% - 32px)" fxFlex.lt-sm="100%" >
+           
+            <mat-card class="example-card">
+              <mat-card-header>
+                <mat-card-subtitle>Acceleration RMS</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                 <app-ngx-line></app-ngx-line>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </ng-container>
+</div>
+

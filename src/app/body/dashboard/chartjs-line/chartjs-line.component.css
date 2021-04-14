@@ -1,0 +1,101 @@
+.chart-container {
+    position: relative;
+  }
+
+
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+    .chart-container {
+        position: relative;
+        width: 40vw;
+        height: 42vh;
+    
+      }
+}
+@media only screen and (min-width: 1024px) {
+    /* styles for browsers larger than 960px; */
+    .chart-container {
+        position: relative;
+        width: 36vw;
+        height: 35vh;
+    
+      }
+}
+@media only screen and (min-width: 1240px) {
+    /* styles for browsers larger than 960px; */
+    .chart-container {
+      position: relative;
+      width: 36vw;
+      height: 40vh;
+      margin-left: 6vw;
+  }
+       
+}
+@media only screen and (min-width: 1366px) {
+  /* styles for browsers larger than 960px; */
+  .chart-container {
+    position: relative;
+    width: 38vw;
+    height: 39vh;
+    margin-left:1vh;
+}
+     
+}
+@media only screen and (min-width: 1440px) {
+    /* styles for browsers larger than 1440px; */
+    .chart-container {
+        position: relative;
+        width: 45vw;
+        height: 48vh;
+        margin-left:3vh;
+      }
+  
+}
+@media only screen and (min-width: 2000px) {
+    /* for sumo sized (mac) screens */
+    .chart-container {
+        position: relative;
+        width: 47vw;
+        height: 48vh;
+      }
+}
+@media only screen and (max-device-width: 480px) {
+   /* styles for mobile browsers smaller than 480px; (iPhone) */
+   .chart-container {
+    position: relative;
+    width: 94vw;
+    height: 30vh;
+  }
+}
+/* @media only screen and (device-width: 768px) { */
+   /* default iPad screens */
+/* } */
+/* different techniques for iPad screening */
+/* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  
+} */
+
+/* @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  
+} */
+/* 
+360×640 – 14.49%
+375×667 – 4.42%
+
+1280×800 – 1.6% 
+1366×768 – 8.77%
+1440×900 – 2.68%
+
+1920×1080 – 7.88% */
+
+@media only screen and (width: 1366px)and (height: 1024px) {
+    /* styles for mobile browsers smaller than 480px; (iPhone) */
+  
+        .chart-container {
+            position: relative;
+            width: 46vw;
+            height: 35vh;
+        
+        }
+    
+  }

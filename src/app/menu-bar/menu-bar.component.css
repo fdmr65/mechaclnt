@@ -1,0 +1,19 @@
+.example-tab-icon {
+    margin-right: 8px;
+  }
+  ::ng-deep .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+      /* background-color: rgb(20, 106, 186) !important; */
+      background-color: rgb(135 196 255 / 10%);;
+  }
+  ::ng-deep mat-tab-header {
+    align-self: center;
+  }
+  span{
+    font-family: 'Roboto';
+    font-size: large;
+    font-weight: 500;
+    color: rgb(4 41 109);
+  }
+  .mat-tab-group{
+     background-color: rgb(212 220 255 / 10%);
+  }

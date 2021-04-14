@@ -1,0 +1,25 @@
+<div id="chart_anomly" *ngIf="chartType==0" >
+<div class="anomaly">
+    <apx-chart 
+[series]="chartOptions.series"
+[chart]="chartOptions.chart"
+[plotOptions]="chartOptions.plotOptions"
+[labels]="chartOptions.labels"
+[fill]="chartOptions.fill"
+[stroke]="chartOptions.stroke"
+></apx-chart>
+</div>
+</div>
+
+<div id="chart_temp" *ngIf="chartType>0" class="temp" >
+    <img src="../../../../assets/img/termometer.png" class="temp-img"alt="" srcset="">
+    <apx-chart
+    [series]="chartOptions1.series"
+    [chart]="chartOptions1.chart"
+    [plotOptions]="chartOptions1.plotOptions"
+    [labels]="chartOptions1.labels"
+    [fill]="chartOptions1.fill"
+    [stroke]="chartOptions1.stroke"
+    >
+</apx-chart>
+</div>

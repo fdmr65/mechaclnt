@@ -21,12 +21,17 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
+              "src/assets/box_tab_icon.ico",
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/apexcharts/dist/apexcharts.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -63,6 +68,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "MechaSenseClient:build"
+           
           },
           "configurations": {
             "production": {
@@ -88,6 +94,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +126,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MechaSenseClient"
+    }
+  },
+  "defaultProject": "MechaSenseClient",
+  "cli": {
+    "analytics": false
+  }
 }

@@ -1,0 +1,19 @@
+<ngx-charts-line-chart
+  [view]="view"
+  [scheme]="colorScheme"
+  [legend]="legend"
+  [showXAxisLabel]="showXAxisLabel"
+  [showYAxisLabel]="showYAxisLabel"
+  [xAxisTickFormatting]=
+  [xAxis]="xAxis"
+  [yAxis]="yAxis"
+  [xAxisLabel]="xAxisLabel"
+  [yAxisLabel]="yAxisLabel"
+  [timeline]="timeline"
+  [results]="multi"
+  (window:resize)="onResize($event)"
+  >
+</ngx-charts-line-chart>
+<mat-checkbox labelPosition="before" style="margin-right: 1rem" *ngFor="let item of checkedList" [(ngModel)]="item.checked" >
+<span style="margin-left: 1rem">{{item.name.toUpperCase()+"-Axis"}}</span>
+<!-- (select)="onSelect($event)" -->

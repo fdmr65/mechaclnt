@@ -1,0 +1,19 @@
+<div (window:resize)="onResize($event)">
+  <apx-chart
+ 
+[series]="series"
+[chart]="chart"
+[dataLabels]="dataLabels"
+[markers]="markers"
+[title]="title"
+[fill]="fill"
+[yaxis]="yaxis"
+[xaxis]="xaxis"
+[autoUpdateSeries]="true"
+[legend]="legend"
+
+>
+</apx-chart> 
+</div>  
+<mat-checkbox labelPosition="before" style="margin-right: 1rem" *ngFor="let item of checkedList" [(ngModel)]="item.checked" >
+  <span style="margin-left: 1rem">{{item.name.toUpperCase()+"-Axis"}}</span>

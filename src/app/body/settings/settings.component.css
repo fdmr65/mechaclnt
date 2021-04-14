@@ -1,0 +1,151 @@
+.example-card{
+    padding:0  5px 0 5px;
+    background-color: rgb(193 225 255 / 19%);
+    border-radius: 20px;
+    width: 17vw;
+
+}
+img{
+    min-width: 8vw;
+    height: 15vh;
+    /* padding-left: 20px; */
+}
+button {
+    border-radius: -1;
+}
+
+
+
+.mat-card-header .mat-card-title {
+    font-size: 14px;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        left: 35%;
+        width: 26%;
+    }
+  }
+
+@media only screen and (min-width: 960px) {
+    /* styles for browsers larger than 960px; */
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 30vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 55%;
+    }
+  }
+  @media only screen and (min-width: 1024px) {
+    /* styles for browsers larger than 960px; */
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 13vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 38%;
+    }
+  }
+  @media only screen and (min-width: 1240px) {
+    .example-card{
+       
+    padding: 0 5px 0 5px;
+    background-color: rgb(193 225 255 / 19%);
+    border-radius: 20px;
+    width: 10vw;
+
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 25%;
+    }
+   
+  }
+  @media screen and (min-width: 1366px) {
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 13vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 32%;
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 9vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 28%;
+    
+    }
+  }
+  @media only screen and (min-width: 2000px) {
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 9vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        top: 5%;
+        right: 20%;
+        width: 55%;
+    }
+  }
+  @media only screen and (max-device-width: 480px) {
+    .example-card{
+        padding:0  5px 0 5px;
+        background-color: rgb(193 225 255 / 19%);
+        border-radius: 20px;
+        width: 35vw;
+    
+    }
+    .example-card-first{
+        background-color: rgb(193 225 255 / 19%);
+        margin-top: auto;
+        margin-left: auto;
+        top: 5%;
+        right: 20%;
+        width: 55%;
+    }
+  }
+  /* .example-card-first{
+    background-color: rgb(193 225 255 / 19%);
+    top: 5%;
+    right: 20%;
+    width: 55%;
+} */
